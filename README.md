@@ -1,2 +1,1 @@
-# 343boilerplate
-starter theme for 343design
+# pure-boilerplate
