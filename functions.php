@@ -52,7 +52,7 @@ add_action( 'init', 'register_my_menus' );
 
 
 // register da scripts that we often use
-function pure_enqueue_scripts() {
+function enqueue_scripts() {
 
   wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '', 'all' );
   wp_register_style( 'ss-air', get_template_directory_uri() . '/fonts/ss-air/ss-air.css', array(), '', 'all' );
@@ -89,7 +89,7 @@ function pure_enqueue_scripts() {
   wp_enqueue_script( 'pin' );
 
 }
-add_action('wp_enqueue_scripts', 'pure_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 
 // Add RSS links to the header
@@ -184,7 +184,7 @@ function my_save_extra_profile_fields( $user_id )
 // Add custom branding to the footer of the admin
  
 function modify_footer_admin () {
-  echo 'Created by <a href="http://www.purecharity.com">Pure Charity</a>.';
+  echo 'Created by <a href="http://www.343design.net">343design</a>.';
 }
 
 add_filter('admin_footer_text', 'modify_footer_admin');
